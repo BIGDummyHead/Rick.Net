@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Rick.Net</id>
+    <version>1.0.0.2</version>
+    <authors>BIGDummyHead</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">mitLicense.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>4292dfb4d459b8c7dcc64ddf8ff7ecfa.jpg</icon>
+    <projectUrl>https://github.com/BIGDummyHead/Rick.Net</projectUrl>
+    <description>A Wrapper for The Rick and Morty API</description>
+    <releaseNotes>Fixed Json error handle</releaseNotes>
+    <copyright>© Shawn Bohn</copyright>
+    <tags>Wrapper, Api</tags>
+    <repository type="Wrapper" url="https://github.com/BIGDummyHead/Rick.Net" />
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\shawn\Documents\GitHub\Rick.Net\Rick.Net-Sol\Rick.Net\bin\Debug\net5.0\Rick.Net.dll" target="lib\net5.0\Rick.Net.dll" />
+    <file src="C:\Users\shawn\Documents\GitHub\Rick.Net\Rick.Net-Sol\Rick.Net\bin\Debug\net5.0\Rick.Net.xml" target="lib\net5.0\Rick.Net.xml" />
+    <file src="C:\Users\shawn\source\mitLicense.txt" target="mitLicense.txt" />
+  </files>
+</package>

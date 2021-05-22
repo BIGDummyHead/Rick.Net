@@ -47,36 +47,15 @@ namespace Rick
         /// </summary>
         public string Created { get; set; }
 
-        private Place _ori;
-        private Place _loc;
-
         /// <summary>
         /// The last <see cref="Place"/> this character is known to be
         /// </summary>
-        public Place CharacterLocation
-        {
-            get
-            {
-                if (_loc is null)
-                    _loc = new Place(_location);
-
-                return _loc;
-            }
-        }
+        public Location Location { get; set; }
 
         /// <summary>
         /// Where this character came from
         /// </summary>
-        public Place CharacterOrigin
-        {
-            get
-            {
-                if (_ori is null)
-                    _ori = new Place(_origin);
-
-                return _ori;
-            }
-        }
+        public Location Origin { get; set; }
 
         /// <summary>
         /// The episodes this character stars in
@@ -88,10 +67,5 @@ namespace Rick
         /// The <see cref="Created"/> formated to be a <seealso cref="DateTime"/> value
         /// </summary>
         public DateTime DateCreated => DateTime.Parse(Created);
-
-        [JsonProperty("Origin")]
-        private JObject _origin;
-        [JsonProperty("Location")]
-        private JObject _location;
     }
 }

@@ -6,7 +6,7 @@
     <Authors>BIGDummyHead</Authors>
     <Description>A Wrapper for The Rick and Morty API</Description>
     <Copyright>© Shawn Bohn</Copyright>
-    <PackageLicenseFile>mitLicense.txt</PackageLicenseFile>
+    <PackageLicenseFile></PackageLicenseFile>
     <PackageProjectUrl>https://github.com/BIGDummyHead/Rick.Net</PackageProjectUrl>
     <PackageIcon>4292dfb4d459b8c7dcc64ddf8ff7ecfa.jpg</PackageIcon>
     <RepositoryUrl>https://github.com/BIGDummyHead/Rick.Net</RepositoryUrl>
@@ -14,6 +14,10 @@
     <PackageTags>Wrapper, Api</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
+    <Version>1.0.0.2</Version>
+    <PackageReleaseNotes>Fixed Json error handle</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

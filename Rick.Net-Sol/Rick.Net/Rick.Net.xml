@@ -98,12 +98,12 @@
             When this character was created
             </summary>
         </member>
-        <member name="P:Rick.Character.CharacterLocation">
+        <member name="P:Rick.Character.Location">
             <summary>
-            The last <see cref="T:Rick.Place"/> this character is known to be
+            The last <see cref="!:Place"/> this character is known to be
             </summary>
         </member>
-        <member name="P:Rick.Character.CharacterOrigin">
+        <member name="P:Rick.Character.Origin">
             <summary>
             Where this character came from
             </summary>
@@ -270,26 +270,6 @@
         <member name="P:Rick.Multiple`1.Results">
             <summary>
             All results included in request
-            </summary>
-        </member>
-        <member name="T:Rick.Place">
-            <summary>
-            Defines a place in the Rick and Morty universe
-            </summary>
-        </member>
-        <member name="P:Rick.Place.Name">
-            <summary>
-            The name of this place
-            </summary>
-        </member>
-        <member name="P:Rick.Place.URL">
-            <summary>
-            The direct url to this place
-            </summary>
-        </member>
-        <member name="P:Rick.Place.Info">
-            <summary>
-            Information of the Place this character came from or where they were last seen
             </summary>
         </member>
         <member name="T:Rick.Search">
