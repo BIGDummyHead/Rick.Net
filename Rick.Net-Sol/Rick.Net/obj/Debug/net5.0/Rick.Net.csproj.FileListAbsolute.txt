@@ -1,0 +1,12 @@
+C:\Users\shawn\source\repos\Rick.Net-Sol\Rick.Net\bin\Debug\net5.0\Rick.Net.deps.json
+C:\Users\shawn\source\repos\Rick.Net-Sol\Rick.Net\bin\Debug\net5.0\Rick.Net.dll
+C:\Users\shawn\source\repos\Rick.Net-Sol\Rick.Net\bin\Debug\net5.0\ref\Rick.Net.dll
+C:\Users\shawn\source\repos\Rick.Net-Sol\Rick.Net\bin\Debug\net5.0\Rick.Net.pdb
+C:\Users\shawn\source\repos\Rick.Net-Sol\Rick.Net\obj\Debug\net5.0\Rick.Net.csprojAssemblyReference.cache
+C:\Users\shawn\source\repos\Rick.Net-Sol\Rick.Net\obj\Debug\net5.0\Rick.Net.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shawn\source\repos\Rick.Net-Sol\Rick.Net\obj\Debug\net5.0\Rick.Net.AssemblyInfoInputs.cache
+C:\Users\shawn\source\repos\Rick.Net-Sol\Rick.Net\obj\Debug\net5.0\Rick.Net.AssemblyInfo.cs
+C:\Users\shawn\source\repos\Rick.Net-Sol\Rick.Net\obj\Debug\net5.0\Rick.Net.csproj.CoreCompileInputs.cache
+C:\Users\shawn\source\repos\Rick.Net-Sol\Rick.Net\obj\Debug\net5.0\Rick.Net.dll
+C:\Users\shawn\source\repos\Rick.Net-Sol\Rick.Net\obj\Debug\net5.0\ref\Rick.Net.dll
+C:\Users\shawn\source\repos\Rick.Net-Sol\Rick.Net\obj\Debug\net5.0\Rick.Net.pdb

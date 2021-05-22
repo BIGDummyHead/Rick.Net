@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Rick</RootNamespace>
+    <Authors>BIGDummyHead</Authors>
+    <Description>A Wrapper for The Rick and Morty API</Description>
+    <Copyright>© Shawn Bohn</Copyright>
+    <PackageLicenseFile>mitLicense.txt</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/BIGDummyHead/Rick.Net</PackageProjectUrl>
+    <PackageIcon>4292dfb4d459b8c7dcc64ddf8ff7ecfa.jpg</PackageIcon>
+    <RepositoryUrl>https://github.com/BIGDummyHead/Rick.Net</RepositoryUrl>
+    <RepositoryType>Wrapper</RepositoryType>
+    <PackageTags>Wrapper, Api</PackageTags>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Desktop\4292dfb4d459b8c7dcc64ddf8ff7ecfa.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\..\mitLicense.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

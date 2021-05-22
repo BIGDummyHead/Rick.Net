@@ -1,0 +1,501 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rick.Net</name>
+    </assembly>
+    <members>
+        <member name="M:Rick.ApiRequester.RequestAPIAsync(System.String,Rick.ApiRequester.RequestType)">
+            <summary>
+            Runs asnyc
+            </summary>
+            <param name="absoluteURL"></param>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rick.BaseAPI">
+            <summary>
+            The information of the Basic API request links.
+            </summary>
+        </member>
+        <member name="P:Rick.BaseAPI.Characters">
+            <summary>
+            A link to the API Request of Characters.
+            </summary>
+        </member>
+        <member name="P:Rick.BaseAPI.Locations">
+            <summary>
+            A link to the API Request of Locations.
+            </summary>
+        </member>
+        <member name="P:Rick.BaseAPI.Episodes">
+            <summary>
+             A link to the API Request of Episodes.
+            </summary>
+        </member>
+        <member name="T:Rick.CanError">
+            <summary>
+            Defines an API request that can error!
+            <para><see cref="P:Rick.CanError.DidError"/> to check if your request was not found!</para>
+            </summary>
+        </member>
+        <member name="P:Rick.CanError.ErrorMessage">
+            <summary>
+            The error message if any
+            </summary>
+        </member>
+        <member name="P:Rick.CanError.DidError">
+            <summary>
+            Is there an error message?
+            </summary>
+        </member>
+        <member name="T:Rick.Character">
+            <summary>
+            Defines someone who has starred in Rick and Morty
+            </summary>
+        </member>
+        <member name="P:Rick.Character.ID">
+            <summary>
+            The id to get this character by
+            </summary>
+        </member>
+        <member name="P:Rick.Character.Name">
+            <summary>
+            The name of this character
+            </summary>
+        </member>
+        <member name="P:Rick.Character.Status">
+            <summary>
+            The status of this character, whether they be living, dead, or unknown
+            </summary>
+        </member>
+        <member name="P:Rick.Character.Species">
+            <summary>
+            The species this character belongs to 
+            </summary>
+        </member>
+        <member name="P:Rick.Character.Type">
+            <summary>
+            The type of this character
+            </summary>
+        </member>
+        <member name="P:Rick.Character.Gender">
+            <summary>
+            The gender of this character, whether they be Female, Male, Genderless, or Unknown
+            </summary>
+        </member>
+        <member name="P:Rick.Character.Image">
+            <summary>
+            A direct image of this character | 300x300
+            </summary>
+        </member>
+        <member name="P:Rick.Character.URL">
+            <summary>
+            The direct URL to this character
+            </summary>
+        </member>
+        <member name="P:Rick.Character.Created">
+            <summary>
+            When this character was created
+            </summary>
+        </member>
+        <member name="P:Rick.Character.CharacterLocation">
+            <summary>
+            The last <see cref="T:Rick.Place"/> this character is known to be
+            </summary>
+        </member>
+        <member name="P:Rick.Character.CharacterOrigin">
+            <summary>
+            Where this character came from
+            </summary>
+        </member>
+        <member name="P:Rick.Character.Episodes">
+            <summary>
+            The episodes this character stars in
+            </summary>
+        </member>
+        <member name="P:Rick.Character.DateCreated">
+            <summary>
+            The <see cref="P:Rick.Character.Created"/> formated to be a <seealso cref="T:System.DateTime"/> value
+            </summary>
+        </member>
+        <member name="T:Rick.Episode">
+            <summary>
+            An Episode that was premieried to Adult Swim
+            </summary>
+        </member>
+        <member name="P:Rick.Episode.ID">
+            <summary>
+            An ID to find the Episode
+            </summary>
+        </member>
+        <member name="P:Rick.Episode.Name">
+            <summary>
+            The name of the episode
+            </summary>
+        </member>
+        <member name="P:Rick.Episode.AirDate">
+            <summary>
+            When this Episode aired 
+            </summary>
+        </member>
+        <member name="P:Rick.Episode.EpisodeCode">
+            <summary>
+            The direct code for this episode
+            </summary>
+        </member>
+        <member name="P:Rick.Episode.Characters">
+            <summary>
+            The characters seen in this episode.
+            </summary>
+        </member>
+        <member name="P:Rick.Episode.URL">
+            <summary>
+            A URL to the information of this episode
+            </summary>
+        </member>
+        <member name="P:Rick.Episode.Created">
+            <summary>
+            When this episode was created
+            </summary>
+        </member>
+        <member name="P:Rick.Episode.DateCreated">
+            <summary>
+            The <see cref="P:Rick.Episode.Created"/> in a <seealso cref="T:System.DateTime"/> format
+            </summary>
+        </member>
+        <member name="P:Rick.Episode.AirDateTime">
+            <summary>
+            The <see cref="P:Rick.Episode.AirDate"/> in a <seealso cref="T:System.DateTime"/> format
+            </summary>
+        </member>
+        <member name="T:Rick.Gender">
+            <summary>
+            The gender of a character, used for searching
+            </summary>
+        </member>
+        <member name="F:Rick.Gender.female">
+            <summary>
+            The character is a female
+            </summary>
+        </member>
+        <member name="F:Rick.Gender.male">
+            <summary>
+            The character is a male
+            </summary>
+        </member>
+        <member name="F:Rick.Gender.genderless">
+            <summary>
+            The character is neither a male or female
+            </summary>
+        </member>
+        <member name="F:Rick.Gender.uknown">
+            <summary>
+            It is not known what gender this character is.
+            </summary>
+        </member>
+        <member name="T:Rick.Info">
+            <summary>
+            Only displayed when making a <see cref="T:Rick.Multiple`1"/> request.
+            </summary>
+        </member>
+        <member name="P:Rick.Info.Count">
+            <summary>
+            The count of objects in a category. Characters, Locations, and Episodes.
+            </summary>
+        </member>
+        <member name="P:Rick.Info.Pages">
+            <summary>
+            The amount of pages.
+            </summary>
+        </member>
+        <member name="P:Rick.Info.Next">
+            <summary>
+            The next page
+            <para>Can Be Null</para>
+            </summary>
+        </member>
+        <member name="P:Rick.Info.Previous">
+            <summary>
+            The previous page
+            <para>Can Be Null</para>
+            </summary>
+        </member>
+        <member name="T:Rick.Location">
+            <summary>
+            A Location in the Rick and Morty universe
+            </summary>
+        </member>
+        <member name="P:Rick.Location.ID">
+            <summary>
+            The id to find this location by
+            </summary>
+        </member>
+        <member name="P:Rick.Location.Name">
+            <summary>
+            The name of this location
+            </summary>
+        </member>
+        <member name="P:Rick.Location.Type">
+            <summary>
+            This location's type
+            </summary>
+        </member>
+        <member name="P:Rick.Location.Dimension">
+            <summary>
+            The dimension this location resides in
+            </summary>
+        </member>
+        <member name="P:Rick.Location.Residents">
+            <summary>
+            The people who live in this dimension
+            </summary>
+        </member>
+        <member name="P:Rick.Location.URL">
+            <summary>
+            A link to view this dimension.
+            </summary>
+        </member>
+        <member name="T:Rick.Multiple`1">
+            <summary>
+            Defines an API request that has multiple items of <typeparamref name="T"/>
+            <para>Inherits <see cref="T:Rick.CanError"/></para>
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Rick.Multiple`1.Info">
+            <summary>
+            The info on this request
+            </summary>
+        </member>
+        <member name="P:Rick.Multiple`1.Results">
+            <summary>
+            All results included in request
+            </summary>
+        </member>
+        <member name="T:Rick.Place">
+            <summary>
+            Defines a place in the Rick and Morty universe
+            </summary>
+        </member>
+        <member name="P:Rick.Place.Name">
+            <summary>
+            The name of this place
+            </summary>
+        </member>
+        <member name="P:Rick.Place.URL">
+            <summary>
+            The direct url to this place
+            </summary>
+        </member>
+        <member name="P:Rick.Place.Info">
+            <summary>
+            Information of the Place this character came from or where they were last seen
+            </summary>
+        </member>
+        <member name="T:Rick.Search">
+            <summary>
+            Used to Get Information using the API from https://rickandmortyapi.com/
+            </summary>
+        </member>
+        <member name="M:Rick.Search.GetAllLocationsAsync(System.Int32)">
+            <summary>
+            Get <see cref="T:Rick.Multiple`1"/> of <seealso cref="T:Rick.Location"/>
+            </summary>
+            <param name="page">The page number to get info from</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetAllCharactersAsync(System.Int32)">
+            <summary>
+            Get <see cref="T:Rick.Multiple`1"/> of <seealso cref="T:Rick.Character"/>
+            </summary>
+            <param name="page">The page number to get info from</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetAllEpisodesAsync(System.Int32)">
+            <summary>
+            Get <see cref="T:Rick.Multiple`1"/> of <seealso cref="T:Rick.Episode"/>
+            <param name="page">The page number to get info from</param>
+            <returns></returns>
+            </summary>
+        </member>
+        <member name="M:Rick.Search.GetEpisodeAsync(System.Int32,System.String,System.String)">
+             <summary>
+             Get <see cref="T:Rick.Multiple`1"/> of <seealso cref="T:Rick.Episode"/> | Filtered
+             <param name="page">The page number to get info from</param>
+             <param name="episodeName">The name of the Episode - Can Leave Null</param>
+             <param name="episodeCode">The episode code - Can Leave Null</param>
+             <returns></returns>
+            </summary>
+        </member>
+        <member name="M:Rick.Search.GetLocationAsync(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Get <see cref="T:Rick.Multiple`1"/> of <seealso cref="T:Rick.Location"/> | Filtered
+            </summary>
+            <param name="page">The page to get information from</param>
+            <param name="name">The name of the Location</param>
+            <param name="type">The type of the location</param>
+            <param name="dimension">The dimension the location resides in</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetCharacterAsync(System.Int32,System.String,Rick.Status,System.String,System.String,Rick.Gender)">
+            <summary>
+            Get <see cref="T:Rick.Multiple`1"/> of <seealso cref="T:Rick.Character"/> | Filtered
+            </summary>
+            <param name="page">The page to get information from</param>
+            <param name="name">The name of the character</param>
+            <param name="status">The status of this character</param>
+            <param name="species">The speicies of this character</param>
+            <param name="type">The type of this character</param>
+            <param name="gender">The gender of the character</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetEpisodeAsync(System.Int32)">
+            <summary>
+            Get an <see cref="T:Rick.Episode"/> by it's ID
+            </summary>
+            <param name="id">The id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetLocationAsync(System.Int32)">
+            <summary>
+            Get an <see cref="T:Rick.Location"/> by it's ID
+            </summary>
+            <param name="id">The id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetCharacterAsync(System.Int32)">
+            <summary>
+            Get an <see cref="T:Rick.Character"/> by it's ID
+            </summary>
+            <param name="id">The id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetCharacter(System.Int32,System.String,Rick.Status,System.String,System.String,Rick.Gender)">
+            <summary>
+            <see cref="M:Rick.Search.GetCharacterAsync(System.Int32,System.String,Rick.Status,System.String,System.String,Rick.Gender)"/>
+            </summary>
+            <param name="page"></param>
+            <param name="name"></param>
+            <param name="status"></param>
+            <param name="species"></param>
+            <param name="type"></param>
+            <param name="gender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetLocation(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            <see cref="M:Rick.Search.GetLocationAsync(System.Int32,System.String,System.String,System.String)"/>
+            </summary>
+            <param name="page"></param>
+            <param name="name"></param>
+            <param name="type"></param>
+            <param name="dimension"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetEpisode(System.Int32,System.String,System.String)">
+            <summary>
+            <see cref="M:Rick.Search.GetEpisodeAsync(System.Int32,System.String,System.String)"/>
+            </summary>
+            <param name="page"></param>
+            <param name="episodeName"></param>
+            <param name="episodeCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetAllEpisodes(System.Int32)">
+            <summary>
+            <see cref="M:Rick.Search.GetAllEpisodesAsync(System.Int32)"/>
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetAllCharacters(System.Int32)">
+            <summary>
+            <see cref="M:Rick.Search.GetAllCharactersAsync(System.Int32)"/>
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetAllLocations(System.Int32)">
+            <summary>
+            <see cref="M:Rick.Search.GetAllLocationsAsync(System.Int32)"/>
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetEpisode(System.Int32)">
+            <summary>
+            <see cref="M:Rick.Search.GetEpisodeAsync(System.Int32)"/>
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetLocation(System.Int32)">
+            <summary>
+            <see cref="M:Rick.Search.GetLocationAsync(System.Int32)"/>
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetCharacter(System.Int32)">
+            <summary>
+            <see cref="M:Rick.Search.GetCharacterAsync(System.Int32)"/>
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetBaseAsync">
+            <summary>
+            Get the base API used 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetBase">
+            <summary>
+            Get the base API used
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetContentAsync(System.String)">
+            <summary>
+            Get the content of a URL : Sends a GET Request
+            </summary>
+            <param name="url">The absolute URL</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.UseLink``1(System.String)">
+            <summary>
+            Use a link gotten that leads to a <see cref="T:Rick.Episode"/>, <seealso cref="T:Rick.Location"/>, or <seealso cref="T:Rick.Character"/>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="url">Absolute URL</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rick.Search.GetContent(System.String)">
+            <summary>
+            Get the content of a URL : Sends a GET Request
+            </summary>
+            <param name="url">The absolute URL</param>
+            <returns></returns>
+        </member>
+        <member name="T:Rick.Status">
+            <summary>
+            The status of a character, used for searching
+            </summary>
+        </member>
+        <member name="F:Rick.Status.alive">
+            <summary>
+            The character is Alive
+            </summary>
+        </member>
+        <member name="F:Rick.Status.dead">
+            <summary>
+            The character is dead
+            </summary>
+        </member>
+        <member name="F:Rick.Status.unknown">
+            <summary>
+            The character is not known to be dead or alive
+            </summary>
+        </member>
+    </members>
+</doc>
