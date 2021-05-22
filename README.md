@@ -55,6 +55,23 @@ Location z = locations.Results[7];
 
 ```
 
+## Error
+
+You may be wondering. "What if my request fails or there is no Character, Location, or Episode for this ID/Criteria?"
+
+Each API request model comes with the CanError class inherited.
+
+You can check if your request has an error like so
+
+```csharp
+var x = await Search.GetEpisodeAsync(20);
+
+if(x.DidError)
+  return;
+  
+//do code
+```
+
 ## API Info
 
 [Website](https://rickandmortyapi.com/)
