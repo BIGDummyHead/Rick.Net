@@ -34,5 +34,18 @@ namespace Rick
         {
             return GetEnumerator();
         }
+
+        public T this[int index]
+        {
+            get
+            {
+                return Results[index];
+            }
+
+            set
+            {
+                Results[index] = value;
+            }
+        }
     }
 }
