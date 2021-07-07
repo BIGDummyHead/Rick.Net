@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Rick
+﻿namespace Rick
 {
     /// <summary>
     /// The status of a character, used for searching

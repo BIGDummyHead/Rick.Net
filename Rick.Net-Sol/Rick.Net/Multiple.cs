@@ -1,8 +1,5 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Rick
 {
@@ -11,7 +8,7 @@ namespace Rick
     /// <para>Inherits <see cref="CanError"/></para>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public sealed class Multiple<T> : CanError where T : class
+    public sealed class Multiple<T> : CanError, IEnumerable<T> where T : class
     {
         internal Multiple() { }
 
@@ -25,5 +22,17 @@ namespace Rick
         /// </summary>
         public T[] Results { get; set; }
 
+        public IEnumerator<T> GetEnumerator()
+        {
+            foreach (T item in Results)
+            {
+                yield return item;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 }
