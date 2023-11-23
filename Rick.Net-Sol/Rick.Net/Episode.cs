@@ -26,6 +26,7 @@ namespace Rick
         /// <summary>
         /// The direct code for this episode
         /// </summary>
+        [JsonProperty("episode")]
         public string EpisodeCode { get; set; }
         /// <summary>
         /// The characters seen in this episode.
